@@ -71,11 +71,6 @@
     margin: 20px 0px;
 }
 
-/* .mem__description:hover {
-    color: red;
-    transition: 1s;
-} */
-
 @media(max-width: 940px) {
     .mem__description {
         font-size: 1.5em;
@@ -94,13 +89,14 @@
     margin: 0 auto;
 }
 
-/* Иконка справа при выборе*/
-.mem__item:hover .mems__content .mem__description:after {
+/* Иконки при наведении анимация*/
+.mem__item:hover .mem__description:after {
     transition: transform .35s;
     transform: rotate(90deg);
 }
 
-.mem__item:hover input:not(:checked)~.mems__content img {
+/* Анимация и автоматические открытие новых инпутов */
+.mem__item:hover input:not(:checked)~.mem__image {
     display: block;
     animation: animation 1s;
 }
@@ -111,17 +107,13 @@
     float: right;
 }
 
-/* Стиль иконки, когда выбрано */
-input:checked~.mems__content .mem__description:after {
-    border-color: #000000;
-}
-
 /* Показать изображение */
-input:checked~.mems__content img {
+input:checked~.mem__image {
     display: block;
 }
 
-input:checked~.mems__content .mem__description {
+/* Цвет выбранного инпута */
+input:checked~.mem__description {
     color: #000000;
     transition: 1s;
 }
