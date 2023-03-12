@@ -10,20 +10,17 @@
     }
 }
 
-
-
 .body {
-    background-color: #2A2C2F;
+    background-color: #ecf0f1;
     font-family: 'AtypDisplay', sans-serif;
-    font-weight: 700;
     font-style: normal;
+    font-weight: 700;
 }
 
 .page {
+    margin: 20px auto;
     max-width: 1400px;
     min-height: 400px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: rgb(255, 255, 255);
     border-radius: 3em;
 }
@@ -31,7 +28,7 @@
 .mem__title {
     margin: 0;
     font-size: 2em;
-    padding: 0.67em 0;
+    padding: 20px 0;
     text-align: center;
     color: #2A2C2F;
     border-bottom: 1px solid #2A2C2F;
@@ -65,6 +62,8 @@
 }
 
 .mem__description {
+    display: flex;
+    justify-content: space-between;
     font-size: 2em;
     color: #0000ff;
     position: relative;
@@ -85,7 +84,7 @@
 
 .mem__image {
     display: none;
-    max-width: 20%;
+    max-width: 25%;
     margin: 0 auto;
 }
 
@@ -104,7 +103,6 @@
 /* Показывать иконки при наведении */
 .mem__items:hover .mem__description::after {
     content: '\27A4';
-    float: right;
 }
 
 /* Показать изображение */
