@@ -1,5 +1,94 @@
+@keyframes animation {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+
 .body {
     background-color: #2A2C2F;
-    font-family: 'Inter', sans-serif;
+    font-family: 'AtypDisplay', sans-serif;
+    font-weight: 700;
     font-style: normal;
+}
+
+.page {
+    max-width: 1400px;
+    min-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3em;
+}
+
+.mem__title {
+    margin: 0;
+    font-size: 2em;
+    padding: 0.67em 0;
+    text-align: center;
+    color: #2A2C2F;
+    border-bottom: 1px solid #2A2C2F;
+}
+
+.mem__items {
+    padding: 50px;
+}
+
+.mem__item {
+    display: block;
+    margin: 30px 0px;
+    border-bottom: 2px solid #000000;
+    cursor: pointer;
+}
+
+.mem__input {
+    display: none;
+}
+
+.mem__description {
+    font-size: 2em;
+    color: #0000ff;
+    position: relative;
+    margin: 20px 0px;
+}
+
+.mem__image {
+    display: none;
+    max-width: 20%;
+    margin: 0 auto;
+}
+
+/* Автоматический показ при наведении */
+.mem__item:hover .mems__content .mem__description:after {
+    border-style: solid;
+    border-width: 0 15px 20px 15px;
+    border-color: transparent transparent #000000 transparent;
+}
+
+.mem__item:hover input:not(:checked)~.mems__content img {
+    display: block;
+    animation: animation 1s;
+}
+
+/* Переключение при клике */
+input:checked~.mems__content .mem__description:after {
+    border-style: solid;
+    border-width: 0 15px 20px 15px;
+    border-color: transparent transparent #000000 transparent;
+}
+
+input:checked~.mems__content img {
+    display: block;
+}
+
+input:checked~.mems__content .mem__description {
+    color: #000000;
+    transition: 1s;
 }
