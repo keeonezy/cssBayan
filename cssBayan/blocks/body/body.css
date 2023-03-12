@@ -94,11 +94,10 @@
     margin: 0 auto;
 }
 
-/* Автоматический показ при наведении */
+/* Иконка справа при выборе*/
 .mem__item:hover .mems__content .mem__description:after {
-    border-style: solid;
-    border-width: 0 15px 20px 15px;
-    border-color: #000000;
+    transition: transform .35s;
+    transform: rotate(90deg);
 }
 
 .mem__item:hover input:not(:checked)~.mems__content img {
@@ -106,13 +105,18 @@
     animation: animation 1s;
 }
 
-/* Переключение при клике */
+/* Показывать иконки при наведении */
+.mem__items:hover .mem__description::after {
+    content: '\27A4';
+    float: right;
+}
+
+/* Стиль иконки, когда выбрано */
 input:checked~.mems__content .mem__description:after {
-    border-style: solid;
-    border-width: 0 15px 20px 15px;
     border-color: #000000;
 }
 
+/* Показать изображение */
 input:checked~.mems__content img {
     display: block;
 }
