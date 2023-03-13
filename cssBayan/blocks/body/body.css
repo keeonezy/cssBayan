@@ -25,6 +25,11 @@
     border-radius: 3em;
 }
 
+.mem__link {
+    color: #c00;
+    margin-left: 50px;
+}
+
 .mem__title {
     margin: 0;
     font-size: 2em;
